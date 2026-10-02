@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Premium Fabrics - Keona Textiles</title> 
+
+<style> 
+*{margin:0;padding:0;box-sizing:border-box;} 
+body{font-family:Arial,sans-serif;background:#f3f3f3;color:#222;} 
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 25px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000;overflow:visible;} 
+.left-menu,.right-menu{width:33%;display:flex;gap:18px;align-items:center;} 
+.right-menu{justify-content:flex-end;} 
+.center-logo{width:34%;display:flex;justify-content:center;align-items:center;gap:12px;} 
+.center-logo img{height:78px;} 
+.left-menu a{text-decoration:none;color:#222;font-weight:bold;} 
+.dropdown{position:relative;display:inline-block;} 
+.dropbtn{cursor:pointer;font-weight:bold;text-decoration:none;color:#222;padding:8px 0;display:inline-block;} 
+.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:270px;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.12);border-radius:10px;overflow:hidden;z-index:9999;} 
+.dropdown-content a{display:block;padding:14px 18px;text-decoration:none;color:#222;font-weight:600;border-bottom:1px solid #eee;transition:.3s;white-space:nowrap;} 
+.dropdown-content a:hover{background:#f3faf3;padding-left:24px;color:#0b3d2e;} 
+.dropdown:hover .dropdown-content{display:block;} 
+.btn{background:#ff6600;color:#fff;border:none;padding:12px 22px;border-radius:6px;font-weight:bold;cursor:pointer;} 
+.hero{height:320px;background:url('spice-banner.jpg') center/cover no-repeat;} 
+.title{text-align:center;font-size:38px;color:#0b3d2e;padding:40px 15px 20px;font-weight:bold;} 
+.products{max-width:1200px;margin:auto;padding:10px 20px 60px;display:grid;grid-template-columns:repeat(3,1fr);gap:35px;justify-content:start;}
+.products .card{width:100%;max-width:376px;}
+@media(max-width:900px){.products{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.products{grid-template-columns:1fr;}.products .card{max-width:100%;}} 
+.card{background:#fff;padding:18px;border-radius:16px;box-shadow:0 8px 18px rgba(0,0,0,.08);text-align:center;} 
+.card img{width:100%;height:280px;object-fit:cover;border-radius:12px;} 
+.card h3{font-size:24px;margin:16px 0 14px;} 
+.read-btn{display:inline-block;padding:12px 28px;border:2px solid #ff6600;color:#ff6600;text-decoration:none;border-radius:8px;font-weight:bold;} 
+.read-btn:hover{background:#ff6600;color:#fff;} 
+.footer-top{background:#003b8f;color:#fff;padding:35px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px;} 
+.footer-top h3{margin-bottom:15px}.footer-top p{margin:10px 0}.footer-top a{color:#fff;text-decoration:none}.footer-top a:hover{text-decoration:underline}
+.footer-bottom{background:#ff5a1f;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;} 
+.socials{display:flex;gap:18px}.socials a{color:#fff;text-decoration:none;font-size:26px;} 
+@media(max-width:900px){.navbar{flex-direction:column;gap:15px}.left-menu,.center-logo,.right-menu{width:100%;justify-content:center;flex-wrap:wrap}.hero{height:220px}.title{font-size:30px}} 
+.airux-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.60);z-index:99999;padding:25px;overflow:auto}
+.airux-modal.active{display:flex;align-items:center;justify-content:center}
+.airux-form-card{position:relative;width:100%;max-width:760px;background:#fff;border-radius:14px;padding:34px;box-shadow:0 18px 55px rgba(0,0,0,.28);border-top:5px solid #ff6600}
+.airux-form-card h2{color:#0b3d2e;font-size:28px;margin-bottom:8px}.form-intro{color:#666;line-height:1.6;margin-bottom:24px}
+.airux-close{position:absolute;right:18px;top:14px;border:0;background:transparent;font-size:30px;cursor:pointer;color:#555}
+.airux-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.airux-full{grid-column:1/-1}
+.airux-form-card input,.airux-form-card textarea{width:100%;padding:15px 16px;border:1px solid #d7d7d7;border-radius:7px;font:16px Arial,sans-serif;outline:none}
+.airux-form-card textarea{height:135px;resize:vertical}.airux-send{width:100%;padding:15px;border:0;border-radius:7px;background:#003b8f;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}
+.airux-send:hover{background:#0b3d2e}.airux-form-note{font-size:12px;color:#777;margin-top:12px}
+@media(max-width:700px){.airux-form-grid{grid-template-columns:1fr}.airux-full{grid-column:auto}.airux-form-card{padding:28px 20px}}
+</style> 
+</head> 
+<body> 
+<div class="navbar"> 
+<div class="left-menu"> 
+<a href="index.html">Home</a> 
+<div class="dropdown"><a href="#" class="dropbtn">Our Company ▼</a><div class="dropdown-content"><a href="about.html">About Us</a><a href="accreditation.html">Accreditation</a></div></div> 
+<div class="dropdown"><a href="#" class="dropbtn">Products ▼</a><div class="dropdown-content"><a href="Premium Fabrics.html">Premium Fabrics</a></div></div> 
+<a href="contact.html">Contact</a> 
+</div> 
+<div class="center-logo"><img src="logo.png"></div> 
+<div class="right-menu"><button class="btn" onclick="openAiruxQuote()">Request Quote</button></div> 
+</div> 
+
+<div class="hero"></div> 
+<div class="title">Variety of Fabrics</div>
+
+<div class="products">
+  <div class="card">
+    <img src="premium-blended-linen.jpg" alt="Premium Blended Linen">
+    <h3>Premium Blended Linen</h3>
+    <a href="premium-blended-linen-details.html" class="read-btn">READ MORE</a>
+  </div>
+</div>
+
+<div class="footer-top"> 
+<div><h3>Quick Links</h3><p><a href="index.html">Home</a></p><p><a href="about.html">About Us</a></p><p><a href="Premium Fabrics.html">Products</a></p><p><a href="contact.html">Contact us</a></p></div> 
+<div><h3>Get in Touch</h3><p>📞 +91 6352809443</p><p>✉️ keonatextiles276@gmil.com</p><p>📍 Surat, Gujarat, India</p></div> 
+<div><h3>Product</h3><p><a href="Premium Fabrics.html">Premium Fabrics</a></p></div> 
+<div><h3>Membership</h3><p>Proud Member of Trade Council</p></div> 
+</div> 
+<div class="footer-bottom"><div>© 2026 Keona Textiles. All Rights Reserved</div><div class="socials"><a href="#">f</a><a href="#">in</a><a href="#">◎</a></div></div> 
+
+<div class="airux-modal" id="airuxQuoteModal" onclick="if(event.target===this)closeAiruxQuote()">
+<div class="airux-form-card">
+<button class="airux-close" type="button" onclick="closeAiruxQuote()">&times;</button>
+<h2>Request a Quote</h2>
+<p class="form-intro">Share your product requirement and our team will respond with quotation details.</p>
+<form action="https://formsubmit.co/keonatextiles276@gmil.com" method="POST"> 
+<input type="hidden" name="_subject" value="REQUEST QUOTE - Keona Textiles Website"> 
+<input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"> 
+<div class="airux-form-grid"> 
+<div class="airux-full"><input type="text" name="Name" placeholder="Name" required></div> 
+<div><input type="email" name="Email" placeholder="Email" required></div> 
+<div><input type="tel" name="Phone" placeholder="Phone No" required></div> 
+<div class="airux-full"><input type="text" name="Product_Requirement" placeholder="Product / Requirement" required></div> 
+<div class="airux-full"><textarea name="Message" placeholder="Quantity, packaging, destination country or other quotation details" required></textarea></div> 
+<div class="airux-full"><button class="airux-send" type="submit">Request Quote</button></div> 
+</div></form> 
+<p class="airux-form-note">Inquiry will be sent to <strong>keonatextiles276@gmil.com</strong>.</p> 
+</div></div> 
+<script> 
+function openAiruxQuote(){document.getElementById('airuxQuoteModal').classList.add('active');document.body.style.overflow='hidden';} 
+function closeAiruxQuote(){document.getElementById('airuxQuoteModal').classList.remove('active');document.body.style.overflow='';} 
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAiruxQuote();}); 
+</script> 
+</body>  
+</html>

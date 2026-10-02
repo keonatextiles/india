@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Keona Textile</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:Arial,sans-serif;background:#f3f3f3;color:#222}.navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 25px;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}.nav-left,.nav-right{width:33%;display:flex;gap:18px;align-items:center}.nav-right{justify-content:flex-end}.nav-left a{text-decoration:none;color:#222;font-weight:bold}.nav-center{width:34%;display:flex;justify-content:center;align-items:center;gap:12px}.nav-center img{height:78px}.brand{font-size:32px;font-weight:700;color:#0b3d2e}.btn{background:#ff6600;color:#fff;border:none;padding:12px 22px;border-radius:6px;font-weight:bold;cursor:pointer}.dropdown{position:relative}.dropbtn{cursor:pointer;font-weight:bold;text-decoration:none;color:#222}.dropdown-content{display:none;position:absolute;top:100%;left:0;min-width:270px;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.08);border-radius:10px;overflow:hidden;z-index:999}.dropdown-content a{display:block;padding:14px 18px;text-decoration:none;color:#222;font-weight:600;border-bottom:1px solid #eee}.dropdown:hover .dropdown-content{display:block}.hero{height:520px;background:url('about-banner.png') center/cover no-repeat}.about-section{max-width:1250px;margin:auto;padding:70px 20px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about-image img{max-width:100%;width:520px}.about-content{font-size:18px;line-height:1.9;color:#4a4a4a}.about-content p{margin-bottom:22px;text-align:justify}.slogan{font-size:28px;font-weight:bold;color:#0b3d2e;margin-bottom:20px}.signature{margin-top:35px;font-size:20px;font-style:italic}.footer-top a{color:#fff;text-decoration:none}.footer-top a:hover{text-decoration:underline}.footer-top{background:#003b8f;color:#fff;padding:45px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}.footer-bottom{background:#ff5a1f;color:#fff;padding:14px 25px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}.whatsapp{position:fixed;left:20px;bottom:20px;background:#25D366;color:#fff;width:58px;height:58px;padding:0;border-radius:50%;text-decoration:none;display:flex;align-items:center;justify-content:center;z-index:1000;transition:transform .22s ease,box-shadow .22s ease}.whatsapp svg{width:30px;height:30px;display:block;fill:#fff}.whatsapp:hover{transform:scale(1.13);box-shadow:0 8px 20px rgba(0,0,0,.20)}@media(max-width:900px){.navbar{flex-direction:column;gap:15px}.nav-left,.nav-center,.nav-right{width:100%;justify-content:center;flex-wrap:wrap}.hero{height:280px}.about-section{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:10px}}
+
+/* REQUEST QUOTE POPUP */
+.airux-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.60);z-index:99999;padding:25px;overflow:auto}
+.airux-modal.active{display:flex;align-items:center;justify-content:center}
+.airux-form-card{position:relative;width:100%;max-width:760px;background:#fff;border-radius:14px;padding:34px;box-shadow:0 18px 55px rgba(0,0,0,.28);border-top:5px solid #ff6600}
+.airux-form-card h2{color:#0b3d2e;font-size:28px;margin-bottom:8px}
+.airux-form-card .form-intro{color:#666;line-height:1.6;margin-bottom:24px}
+.airux-close{position:absolute;right:18px;top:14px;border:0;background:transparent;font-size:30px;cursor:pointer;color:#555}
+.airux-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.airux-full{grid-column:1/-1}
+.airux-form-card input,.airux-form-card textarea{width:100%;padding:15px 16px;border:1px solid #d7d7d7;border-radius:7px;font:16px Arial,sans-serif;outline:none}
+.airux-form-card input:focus,.airux-form-card textarea:focus{border-color:#0b3d2e;box-shadow:0 0 0 3px rgba(11,61,46,.08)}
+.airux-form-card textarea{height:135px;resize:vertical}
+.airux-send{width:100%;padding:15px;border:0;border-radius:7px;background:#003b8f;color:#fff;font-size:16px;font-weight:bold;cursor:pointer}
+.airux-send:hover{background:#0b3d2e}
+.airux-form-note{font-size:12px;color:#777;margin-top:12px}
+@media(max-width:700px){.airux-form-grid{grid-template-columns:1fr}.airux-full{grid-column:auto}.airux-form-card{padding:28px 20px}}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="nav-left">
+
+<a href="index.html">Home</a>
+
+<div class="dropdown">
+<a href="#" class="dropbtn">Our Company ▼</a>
+<div class="dropdown-content">
+<a href="about.html">About Us</a>
+<a href="accreditation.html">Accreditation</a>
+</div>
+</div>
+
+<div class="dropdown">
+
+<a href="#" class="dropbtn">Products ▼</a>
+
+<div class="dropdown-content">
+<a href="Premium Fabrics.html">Premium Fabrics</a>
+</div>
+
+</div>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<div class="nav-center">
+<img src="logo.png" alt="Logo">
+
+</div>
+
+<div class="nav-right">
+<button class="btn" onclick="openAiruxQuote()">Request Quote</button>
+</div>
+
+</div>
+
+
+<div class="hero"></div>
+
+
+<div class="about-section">
+
+<div class="about-image">
+<img src="team.png" alt="About Team">
+</div>
+
+<div class="about-content">
+
+<div class="slogan">
+Quality • Innovation • Reliability
+</div>
+
+<p>
+<strong>Keona Textiles</strong>, established in <strong>2010 in Surat, Gujarat</strong>, is a trusted manufacturer and supplier of premium fabrics for the fashion and apparel industry.
+</p>
+
+<p>
+We specialize in <strong>Linen, Raw Silk, Crepe, Chinon, Organza, Georgette, Jacquard, Embroidered &amp; Printed Fabrics</strong>, combining quality, innovation and contemporary design.
+</p>
+
+<p>
+With modern infrastructure, strict quality control and continuous product development, we are committed to delivering <strong>premium fabrics with consistent quality and reliable service.</strong>
+</p>
+
+<div class="signature">
+— Keona Textiles
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer-top">
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p><a href="index.html">Home</a></p>
+
+<p><a href="about.html">About Us</a></p>
+
+<p><a href="Premium Fabrics.html">Products</a></p>
+
+<p><a href="contact.html">Contact us</a></p>
+
+</div>
+
+
+<div>
+
+<h3>Get in Touch</h3>
+
+<p>📞 +91 6352809443</p>
+
+<p>✉️ keonatextiles276@gmil.com</p>
+
+<p>📍 Surat, Gujarat, India</p>
+
+</div>
+
+
+<div>
+
+<h3>Product</h3>
+
+<p><a href="Premium Fabrics.html">Premium Fabrics</a></p>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div>
+© 2026 Keona Textile. All Rights Reserved
+</div>
+
+</div>
+
+
+<a href="https://wa.me/916352809443" class="whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.96c0 2.33.68 4.61 1.96 6.56L4 29l7.68-1.99a12.1 12.1 0 0 0 4.35.8h.01C22.67 27.81 28 22.45 28 15.84 28 9.24 22.67 3 16.04 3Zm0 22.78h-.01a9.9 9.9 0 0 1-4.16-.92l-.3-.14-4.55 1.18 1.21-4.42-.16-.31a9.78 9.78 0 0 1-1.04-4.38c0-5.4 4.42-9.79 9.86-9.79 2.63 0 5.1 1.02 6.96 2.87a9.7 9.7 0 0 1 2.89 6.92c0 5.4-4.42 9.79-9.86 9.79Zm5.4-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.46-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.46.13-.61.13-.13.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.07 2.87 1.21 3.07c.15.2 2.1 3.19 5.08 4.47.71.31 1.27.49 1.7.62.71.23 1.36.19 1.87.12.57-.08 1.75-.71 2-1.39.25-.68.25-1.26.17-1.38-.07-.12-.27-.2-.57-.35Z"/></svg>
+</a>
+
+
+<!-- REQUEST QUOTE POPUP -->
+<div class="airux-modal" id="airuxQuoteModal" onclick="if(event.target===this)closeAiruxQuote()">
+<div class="airux-form-card">
+<button class="airux-close" type="button" onclick="closeAiruxQuote()">&times;</button>
+<h2>Request a Quote</h2>
+<p class="form-intro">Share your product requirement and our team will respond with quotation details.</p>
+
+<form action="https://formsubmit.co/keonatextiles276@gmil.com" method="POST">
+<input type="hidden" name="_subject" value="REQUEST QUOTE - Keona Textile Website">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+
+<div class="airux-form-grid">
+<div class="airux-full"><input type="text" name="Name" placeholder="Name" required></div>
+<div><input type="email" name="Email" placeholder="Email" required></div>
+<div><input type="tel" name="Phone" placeholder="Phone No" required></div>
+<div class="airux-full"><input type="text" name="Product_Requirement" placeholder="Product / Requirement" required></div>
+<div class="airux-full"><textarea name="Message" placeholder="Quantity, packaging, destination country or other quotation details" required></textarea></div>
+<div class="airux-full"><button class="airux-send" type="submit">Request Quote</button></div>
+</div>
+</form>
+<p class="airux-form-note">Inquiry will be sent to <strong>keonatextiles276@gmil.com</strong>.</p>
+</div>
+</div>
+
+<script>
+function openAiruxQuote(){
+document.getElementById('airuxQuoteModal').classList.add('active');
+document.body.style.overflow='hidden';
+}
+function closeAiruxQuote(){
+document.getElementById('airuxQuoteModal').classList.remove('active');
+document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAiruxQuote();});
+</script>
+
+</body>
+</html>
